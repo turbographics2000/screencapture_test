@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <video id="vid"></video>
+    <script>
+        navigator.getDisplayMedia({ video: true })
+            .then(stream => {
+                // we have a stream, attach it to a feedback video element
+                vid.srcObject = stream;
+            }, error => {
+                console.log("Unable to acquire screen capture", error);
+            });
+    </script>
+</body>
+
+</html>

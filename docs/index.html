@@ -16,6 +16,7 @@
                 .then(stream => {
                     // we have a stream, attach it to a feedback video element
                     vid.srcObject = stream;
+                    vid.play();
                 }, error => {
                     console.log("Unable to acquire screen capture", error);
                 });
